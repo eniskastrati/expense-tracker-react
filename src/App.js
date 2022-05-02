@@ -1,7 +1,13 @@
 import React from "react";
+import ExpenseItem from "./components/ExpenseItem";
 
 function App() {
-  return <div>Template</div>;
+  return (
+    <div>
+      <h1>Expense Tracker React</h1>
+      <ExpenseItem />
+    </div>
+  );
 }
 
 export default App;
