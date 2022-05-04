@@ -27,6 +27,9 @@ function ExpenseForm() {
       date: new Date(enteredDate) 
     };
     console.log(expenseData)
+    setEnterdTitle('');
+    setEnterdAmount('');
+    setEnterdDate('');
   }
   return (
     <form onSubmit={submitHandler}>
