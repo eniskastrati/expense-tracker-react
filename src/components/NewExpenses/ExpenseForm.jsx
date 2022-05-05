@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import "./ExpenseForm.css";
 
 function ExpenseForm() {
-  const [enteredTitile, setEnterdTitle] = useState('');
-  const [enteredAmount, setEnterdAmount] = useState('');
-  const [enteredDate, setEnterdDate] = useState('');
+  const [enteredTitile, setEnterdTitle] = useState("");
+  const [enteredAmount, setEnterdAmount] = useState("");
+  const [enteredDate, setEnterdDate] = useState("");
   const changeHandlerOne = (e) => {
     e.preventDefault();
     setEnterdTitle(e.target.value);
@@ -24,27 +24,43 @@ function ExpenseForm() {
     const expenseData = {
       title: enteredTitile,
       amount: enteredAmount,
-      date: new Date(enteredDate) 
+      date: new Date(enteredDate),
     };
-    console.log(expenseData)
-    setEnterdTitle('');
-    setEnterdAmount('');
-    setEnterdDate('');
-  }
+    console.log(expenseData);
+    setEnterdTitle("");
+    setEnterdAmount("");
+    setEnterdDate("");
+  };
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label htmlFor="title">Title</label>
-          <input type="text" value={enteredTitile} onChange={changeHandlerOne} />
+          <input
+            type="text"
+            value={enteredTitile}
+            onChange={changeHandlerOne}
+          />
         </div>
         <div className="new-expense__control">
           <label htmlFor="amount">Amount</label>
-          <input type="number" min="0.01" step="0.01" value={enteredAmount} onChange={changeHandlerTwo} />
+          <input
+            type="number"
+            min="0.01"
+            step="0.01"
+            value={enteredAmount}
+            onChange={changeHandlerTwo}
+          />
         </div>
         <div className="new-expense__control">
           <label htmlFor="date">Date</label>
-          <input type="date" min="2019-01-01" max="2022-12-13" value={enteredDate} onChange={changeHandlerThree}/>
+          <input
+            typea="date"
+            min="2019-01-01"
+            max="2022-12-13"
+            value={enteredDate}
+            onChange={changeHandlerThree}
+          />
         </div>
       </div>
       <div className="new-expense__acitons">
