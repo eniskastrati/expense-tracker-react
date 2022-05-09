@@ -16,21 +16,6 @@ function NewExpensesComponent({ ...props }) {
     return expense.date.getFullYear().toString() === filterdYear;
   });
 
-  let expenseContent = <p style={{color: "white"}}>No Expenses foung. </p>;
-
-  if(filteredExpenses.length > 0) {
-    expenseContent = filteredExpenses.map((expense) => {
-      return (
-        <ExpenseItem
-          key={expense.id}
-          title={expense.title}
-          amount={expense.amount}
-          date={expense.date}
-        />
-      );
-    })
-  }
-
   return (
     <>
       <Card className="expenses">
