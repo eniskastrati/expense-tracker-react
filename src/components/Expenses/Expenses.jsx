@@ -22,9 +22,8 @@ function NewExpensesComponent({ ...props }) {
           selected={filterdYear}
           onSelectedYearValue={getSelectedYearValue}
         />
-        {filteredExpenses.length === 0 ? (
-          <p style={{color: "white"}}>No Expenses foung. </p>
-        ) : (
+        {filteredExpenses && <p style={{color: "white"}}>No Expenses foung. </p>}
+        {filteredExpenses.length > 0 && (
           filteredExpenses.map((expense) => {
             return (
               <ExpenseItem
