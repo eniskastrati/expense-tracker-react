@@ -35,11 +35,10 @@ const App = () => {
   }
 
   return (
-    <div>
-      <h1>Expense Tracker React</h1>
+    <>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses data={expenses} />
-    </div>
+    </>
   );
 };
 
