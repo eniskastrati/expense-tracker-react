@@ -9,3 +9,12 @@ fs.readFile(path, 'utf8', (err, data) => {
 	}
 	console.log(data);
 });
+
+let content = "Hellow World";
+
+fs.writeFile('newFile.txt', content, err => {
+	if(err){
+		console.error(err);
+	}
+	console.log("File written successfully");
+});
