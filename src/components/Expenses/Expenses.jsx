@@ -17,15 +17,15 @@ function NewExpensesComponent({ ...props }) {
   });
 
   return (
-    <>
+    <li>
       <Card className="expenses">
         <ExpensesFilter
           selected={filterdYear}
           onSelectedYearValue={getSelectedYearValue}
         />
-        <ExpensesList data={filteredExpenses}/>
+        <ExpensesList data={filteredExpenses} />
       </Card>
-    </>
+    </li>
   );
 }
 
