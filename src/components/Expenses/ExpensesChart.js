@@ -4,22 +4,22 @@ import Chart from '../chart/Chart'
 
 function ExpensesChart(props) {
     const chartDataPoints = [
-        { label: 'Jan', valuse: 0 },
-        { label: 'Feb', valuse: 0 },
-        { label: 'Mar', valuse: 0 },
-        { label: 'Apr', valuse: 0 },
-        { label: 'May', valuse: 0 },
-        { label: 'Jun', valuse: 0 },
-        { label: 'Jul', valuse: 0 },
-        { label: 'Aug', valuse: 0 },
-        { label: 'Sep', valuse: 0 },
-        { label: 'Oct', valuse: 0 },
-        { label: 'Nov', valuse: 0 },
-        { label: 'Dec', valuse: 0 }
+        { label: 'Jan', value: 0 },
+        { label: 'Feb', value: 0 },
+        { label: 'Mar', value: 0 },
+        { label: 'Apr', value: 0 },
+        { label: 'May', value: 0 },
+        { label: 'Jun', value: 0 },
+        { label: 'Jul', value: 0 },
+        { label: 'Aug', value: 0 },
+        { label: 'Sep', value: 0 },
+        { label: 'Oct', value: 0 },
+        { label: 'Nov', value: 0 },
+        { label: 'Dec', value: 0 }
     ];
     for (const expense of props.expense) {
         const expenseMonth = expense.date.getMonth();
-        chartDataPoints[expenseMonth].valuse += expense.amount;
+        chartDataPoints[expenseMonth].value += expense.amount;
     }
     return (
         <Chart dataPoints={chartDataPoints} />
