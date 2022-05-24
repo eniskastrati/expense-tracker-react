@@ -29,6 +29,7 @@ function ExpenseForm(props) {
     };
     props.onSaveExpenseData(expenseData);
     resetHandle();
+    setShowForm(false);
   };
   const resetHandle = () => {
     setEnterdTitle("");
