@@ -7,6 +7,7 @@ function ExpenseForm(props) {
   const [enteredAmount, setEnterdAmount] = useState("");
   const [enteredDate, setEnterdDate] = useState("");
   const [showForm, setShowForm] = useState(false);
+  const maxDateValue = `${new Date().getFullYear().toString()}-12-13`;
   const changeHandlerOne = (e) => {
     e.preventDefault();
     setEnterdTitle(e.target.value);
@@ -64,7 +65,7 @@ function ExpenseForm(props) {
               <input
                 type="date"
                 min="2019-01-01"
-                max="2022-12-13"
+                max={maxDateValue}
                 value={enteredDate}
                 onChange={changeHandlerThree}
               />
